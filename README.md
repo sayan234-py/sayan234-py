@@ -1,27 +1,49 @@
 <div align="center">
 
-<img
-  src="./sayan-banner-matrix.svg?v=3"
-  alt="Sayan Nandi — Full-Stack MERN Developer"
-  width="100%"
-/>
+<img src="./sayan-banner-matrix.svg?v=5" alt="Sayan Nandi — Full-Stack MERN Developer" width="100%">
 
-<br/><br/>
+<br><br>
 
-<table align="center">
-<tr>
+<img src="./sayan-avatar-matrix.svg?v=5" alt="Sayan Nandi" width="240">
 
-<td width="30%" align="center" valign="top">
+<br><br>
 
-<img
-  src="./sayan-avatar-matrix.svg?v=3"
-  alt="Sayan Nandi"
-  width="260"
-/>
+# Sayan Nandi
 
-</td>
+### Full-Stack MERN Developer • Final-Year BCA Student
 
-<td width="70%" valign="top" align="left">
+<p>
+Building real-world web applications with React, Node.js, Express and MongoDB.
+</p>
 
-```bash
-sayan@dev-machine:~$ cat about.txt
+<p>
+<a href="https://github.com/sayan234-py">
+<img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=39FF14">
+</a>
+
+<a href="https://linkedin.com/in/sayan-nandi-152581359">
+<img src="https://img.shields.io/badge/LinkedIn-000000?style=for-the-badge&logo=linkedin&logoColor=39FF14">
+</a>
+
+<a href="mailto:nsayan520@gmail.com">
+<img src="https://img.shields.io/badge/Email-000000?style=for-the-badge&logo=gmail&logoColor=39FF14">
+</a>
+</p>
+
+</div>
+
+---
+
+# `$ whoami`
+
+```text
+Name        : Sayan Nandi
+Role        : Full-Stack MERN Developer
+Education   : BCA — 2023–2027
+Location    : Durgapur, West Bengal, India
+
+Currently
+├── Building MERN applications
+├── Improving backend architecture
+├── Learning data science
+└── Preparing for professional software development roles
