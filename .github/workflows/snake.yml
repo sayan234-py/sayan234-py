@@ -2,8 +2,8 @@ name: Generate Matrix Snake
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # runs once a day
-  workflow_dispatch: {}
+    - cron: "0 0 * * *"
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -12,18 +12,18 @@ jobs:
   generate-snake:
     permissions:
       contents: write
+
     runs-on: ubuntu-latest
+
     steps:
-      - name: Generate contribution snake SVG (matrix palette)
+      - name: Generate Matrix contribution snake
         uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-contribution-grid-snake.svg?color_snake=39FF14,00FF41&color_dots=0B6E1E,000000,0B6E1E,00FF41,39FF14&color_grid=001a05
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            dist/github-contribution-grid-snake.svg?color_snake=FFFFFF,39FF14&color_dots=062A12,0B6E1E,00FF41,39FF14&color_grid=001A05
 
-      - name: Push SVG to output branch
+      - name: Publish snake to output branch
         uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
