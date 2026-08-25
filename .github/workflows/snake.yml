@@ -8,25 +8,29 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   generate-snake:
-    permissions:
-      contents: write
-
     runs-on: ubuntu-latest
 
     steps:
-      - name: Generate Matrix contribution snake
-        uses: Platane/snk@v3
+      - name: Generate contribution snake
+        uses: Platane/snk/svg-only@v3
         with:
-          github_user_name: ${{ github.repository_owner }}
+          github_user_name: sayan234-py
           outputs: |
-            dist/github-contribution-grid-snake.svg?color_snake=FFFFFF,39FF14&color_dots=062A12,0B6E1E,00FF41,39FF14&color_grid=001A05
+            dist/github-contribution-grid-snake.svg?color_snake=%2339FF14&color_dots=%23062A12,%230B6E1E,%2300FF41,%2339FF14,%23FFFFFF
 
-      - name: Publish snake to output branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish snake
         uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
           build_dir: dist
+          commit_message: "chore: update contribution snake"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
