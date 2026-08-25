@@ -1,40 +1,19 @@
-name: Generate Matrix Snake
+<div align="center">
 
-on:
-  schedule:
-    - cron: "0 0 * * *"
+<img src="./sayan-banner-matrix.svg?v=2" alt="Sayan Nandi — Full-Stack MERN Developer" width="100%"/>
 
-  workflow_dispatch:
+<br/>
 
-  push:
-    branches:
-      - main
+<table align="center" border="0">
+<tr>
 
-jobs:
-  generate-snake:
-    permissions:
-      contents: write
+<td width="30%" align="center" valign="top">
 
-    runs-on: ubuntu-latest
+<img src="./sayan-avatar-matrix.svg?v=2" alt="Sayan Nandi" width="260"/>
 
-    steps:
-      - name: Generate Matrix Snake
-        uses: Platane/snk@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
+</td>
 
-          outputs: |
-            dist/github-contribution-grid-snake.svg?color_snake=%2339FF14&color_dots=%23062A12,%230B6E1E,%2300FF41,%2339FF14,%23FFFFFF
+<td width="70%" valign="top">
 
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Push Snake to output branch
-        uses: crazy-max/ghaction-github-pages@v4
-        with:
-          target_branch: output
-          build_dir: dist
-          commit_message: "chore: update matrix snake"
-
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```bash
+sayan@dev-machine:~$ cat about.txt
